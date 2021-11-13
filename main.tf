@@ -3,7 +3,7 @@ terraform {}
 provider "google" {
   #project     = var.project_id
   region      = var.region
-  credentials = "account_host.json"
+  #credentials = "account_host.json"
 }
 
 resource "random_pet" "main" {
