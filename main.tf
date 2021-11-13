@@ -1,7 +1,7 @@
 terraform {}
 
 provider "google" {
-  #project     = var.project_id
+  project     = var.project_id
   region      = var.region
   #credentials = "account_host.json"
 }
@@ -18,17 +18,17 @@ locals {
   prefix = random_pet.main.id
 }
 
-# resource "google_project_service" "service_networking" {
-#   project = var.project_id
-#   service = "servicenetworking.googleapis.com"
-#   disable_dependent_services = true
-# }
+resource "google_project_service" "service_networking" {
+  project = var.project_id
+  service = "servicenetworking.googleapis.com"
+  disable_dependent_services = true
+}
 
-# resource "google_project_service" "ids" {
-#   project = var.project_id
-#   service = "ids.googleapis.com"
-#   disable_dependent_services = true
-# }
+resource "google_project_service" "ids" {
+  project = var.project_id
+  service = "ids.googleapis.com"
+  disable_dependent_services = true
+}
 
 
 # -----------------------------------------------------------------------------------
@@ -47,8 +47,8 @@ module "vpc_trust" {
     }
   }
   depends_on = [
-  #  google_project_service.service_networking,
-  #  google_project_service.ids
+    google_project_service.service_networking,
+    google_project_service.ids
   ]
 }
 
