@@ -1,7 +1,7 @@
 terraform {}
 
 provider "google" {
-  project     = var.project_id
+  #project     = var.project_id
   region      = var.region
   #credentials = "account_host.json"
 }
@@ -19,15 +19,18 @@ locals {
 }
 
 resource "google_project_service" "service_networking" {
-  project = var.project_id
+  #project = var.project_id
   service = "servicenetworking.googleapis.com"
   disable_dependent_services = true
 }
 
 resource "google_project_service" "ids" {
-  project = var.project_id
+  #project = var.project_id
   service = "ids.googleapis.com"
   disable_dependent_services = true
+  depends_on = [
+    google_project_service.service_networking
+  ]
 }
 
 
