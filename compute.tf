@@ -72,7 +72,7 @@ module "vmseries" {
   image_name            = var.vmseries_image_name
   machine_type          = var.vmseries_machine_type
   create_instance_group = true
-  project               = var.project_id
+  #project               = var.project_id
   #ssh_key               = fileexists(var.public_key_path) ? "admin:${file(var.public_key_path)}" : ""
   
   instances = {
