@@ -1,5 +1,5 @@
 resource "google_compute_network" "main" {
-  name                            = var.vpc
+  name                            = var.name
   delete_default_routes_on_create = var.delete_default_route
   auto_create_subnetworks         = false
 }

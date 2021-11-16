@@ -1,17 +1,5 @@
-# output "subnetwork_id" {
-#   value = google_compute_subnetwork.main.*.id
-# }
-
-# output "subnetwork_name" {
-#   value = google_compute_subnetwork.main.*.name
-# }
-
-# output "subnetwork_self_link" {
-#   value = google_compute_subnetwork.main.*.self_link
-# }
-
 output "vpc_name" {
-  value = google_compute_network.main.*.name
+  value = google_compute_network.main.*.name[0]
 }
 
 output "vpc_id" {

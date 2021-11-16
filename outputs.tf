@@ -1,13 +1,20 @@
 # -----------------------------------------------------------------------------------
 # Outputs
-output "kali_login" {
-  value = "ssh kali@${google_compute_instance.default.network_interface.0.access_config.0.nat_ip}"
+output "A-SSH_attacker" {
+  value = "ssh kali@${module.vmseries.nic0_ips["vmseries01"]}"
 }
 
-output "URL_jenkins" {
-  value = "http://${google_compute_instance.jenkins.network_interface.0.access_config.0.nat_ip}:8080"
+output "B-URL_vmseries" {
+  value = "https://${module.vmseries.nic1_ips["vmseries01"]}"
 }
 
-output "URL_juice_shop" {
-  value = "http://${google_compute_instance.juice_shop.network_interface.0.access_config.0.nat_ip}"
+output "C-URL_juiceshop" {
+  value = "http://${module.vmseries.nic0_ips["vmseries01"]}:3000"
 }
+
+output "D-URL_jenkins18" {
+  value = "http://${module.vmseries.nic0_ips["vmseries01"]}:8080"
+}
+
+
+
