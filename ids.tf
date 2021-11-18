@@ -7,7 +7,7 @@ resource "null_resource" "ids" {
 
   provisioner "local-exec" {
        # "./myscript add '${self.triggers.thing}'"
-    command     = "gcloud alpha ids endpoints create ${self.triggers.name} --network ${self.triggers.network} --zone ${self.triggers.zone} --severity INFORMATIONAL"
+    command     = "gcloud alpha ids endpoints create ${self.triggers.name} --network ${self.triggers.network} --zone ${self.triggers.zone} --severity INFORMATIONAL --enable-traffic-logs"
     working_dir = path.module
   }
 
