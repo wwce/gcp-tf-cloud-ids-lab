@@ -91,7 +91,7 @@ In this section, we will walk through how to deploy the environment using Terraf
 
 1. In cloud shell, copy and paste the following commands to clone the repository and to apply the Terraform plan.
 
-    ```
+```
 git clone https://github.com/wwce/gcp-tf-cloud-ids-lab
 cd gcp-tf-cloud-ids-lab
 terraform init
@@ -101,9 +101,7 @@ terraform apply
 
 3. Verify that the Terraform plan will create 26 resources. Enter `yes` to start the build.
 
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![alt_text](https://raw.githubusercontent.com/wwce/gcp-tf-cloud-ids-lab/0ae6302a0f7a146c596223589339312dc7690618/images/image3.png "image_tooltip")
 
 
 
@@ -111,9 +109,7 @@ terraform apply
 
 4. Once the build completes, the following output will be generated.  
 
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![alt_text](https://raw.githubusercontent.com/wwce/gcp-tf-cloud-ids-lab/0ae6302a0f7a146c596223589339312dc7690618/images/image4.png "image_tooltip")
 
 
 
@@ -126,9 +122,7 @@ terraform apply
 2. To verify the VMs are ready, copy and paste the `URL_juiceshop` output value into a web browser.
 3. Once you receive the Juice Shop web page successfully, please proceed to the next part of this lab. 
 
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![alt_text](https://raw.githubusercontent.com/wwce/gcp-tf-cloud-ids-lab/0ae6302a0f7a146c596223589339312dc7690618/images/image5.png "image_tooltip")
 
 
 
@@ -151,8 +145,7 @@ Tip! You can redisplay your Terraform outputs at anytime by running terraform ou
 1. Copy and paste the `URL_attacker` output value into Cloud Shell.  This command will attempt to retrieve the passwords file from a vulnerable web application. 
 
 
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![alt_text](https://raw.githubusercontent.com/wwce/gcp-tf-cloud-ids-lab/0ae6302a0f7a146c596223589339312dc7690618/images/image6.png "image_tooltip")
 
 
 
@@ -175,9 +168,7 @@ curl: (56) Recv failure: Connection reset by peer
 
 1. Copy and paste the `SSH_attacker` output value into Cloud Shell.  This opens a SSH session to the attacker VM (Kali Linux) that runs behind the VM-Series firewall in the shared VPC network.
 
-
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![alt_text](https://raw.githubusercontent.com/wwce/gcp-tf-cloud-ids-lab/0ae6302a0f7a146c596223589339312dc7690618/images/image7.png "image_tooltip")
 
 
 
@@ -189,9 +180,9 @@ Password: kali
 
 
 
-4. Run the following command to attempt to download a sudo-malicious file from the internet.  
+1. Run the following command to attempt to download a sudo-malicious file from the internet.  
 
-    ```
+```
 wget www.eicar.org/download/eicar.com.txt
 ```
 
@@ -199,11 +190,7 @@ wget www.eicar.org/download/eicar.com.txt
 
 (Output)
 
-
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
+![alt_text](https://raw.githubusercontent.com/wwce/gcp-tf-cloud-ids-lab/0ae6302a0f7a146c596223589339312dc7690618/images/image8.png "image_tooltip")
 
 
     The download request should fail.  This is because the VM-Series is preventing malicious file downloads through its content inspection engine. 
@@ -217,17 +204,11 @@ In this section, we will observe the action taken by the VM-Series on the threat
 
 1. Copy and paste the `URL_vmseries` output value into Cloud Shell.  This URL brings you to the management interface of the VM-Series ML-NGFW.
 
-
-
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-
-
+![alt_text](https://raw.githubusercontent.com/wwce/gcp-tf-cloud-ids-lab/0ae6302a0f7a146c596223589339312dc7690618/images/image9.png "image_tooltip")
 
 2. Log into the VM-Series with the following credentials
 
-    ```
+```
 Username: admin
 Password: Pal0Alt0@123
 ```
@@ -235,21 +216,14 @@ Password: Pal0Alt0@123
 
 3. Navigate to **Monitor → Threat**
 
-
-
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/wwce/gcp-tf-cloud-ids-lab/0ae6302a0f7a146c596223589339312dc7690618/images/image10.png "image_tooltip")
 
 
 
 
 4. The threat logs should show the previous inbound and outbound threat attempts. You can click the magnify glass next to any of the logs to view more information. 
 
-
-
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![alt_text](https://raw.githubusercontent.com/wwce/gcp-tf-cloud-ids-lab/0ae6302a0f7a146c596223589339312dc7690618/images/image11.png "image_tooltip")
 
 
 
@@ -257,9 +231,7 @@ Password: Pal0Alt0@123
 
 5. The detailed view of a threat log shows a variety of information, including:  threat severity, filename, file type, application, source/destination country, user, and more. 
 
-
-
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![alt_text](https://raw.githubusercontent.com/wwce/gcp-tf-cloud-ids-lab/0ae6302a0f7a146c596223589339312dc7690618/images/image12.png "image_tooltip")
 
  
 
@@ -275,9 +247,7 @@ In this section, we will launch an exploit from our attacker VM to a Jenkins ser
 
 1. In the Google Cloud console, navigate to **Network Security → Cloud IDS**
 
-
-
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: error handling inline image </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![alt_text](https://raw.githubusercontent.com/wwce/gcp-tf-cloud-ids-lab/0ae6302a0f7a146c596223589339312dc7690618/images/image13.png "image_tooltip")
 
 
 
