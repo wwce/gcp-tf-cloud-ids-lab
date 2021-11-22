@@ -151,6 +151,7 @@ wget www.eicar.org/download/eicar.com.txt
     The download request should fail.  This is because the VM-Series is preventing malicious file downloads through its content inspection engine. 
 
 
+
 ### View Threats on VM-Series
 
 In this section, we will observe the action taken by the VM-Series on the threats attempted in the previous section of this lab. 
@@ -321,7 +322,7 @@ head /etc/passwd
 
 ![alt_text](https://raw.githubusercontent.com/wwce/gcp-tf-cloud-ids-lab/0ae6302a0f7a146c596223589339312dc7690618/images/image27.png "image_tooltip")
 
-###View Threats on Cloud IDS
+### View Threats on Cloud IDS
 
 1. Go to the Google Cloud Console.  Click **THREATS** within the Google Cloud IDS dashboard. 
 
