@@ -7,7 +7,7 @@ service_scopes            = ["cloud-platform"]
 
 #image_jenkins             = "https://www.googleapis.com/compute/v1/projects/panw-utd-public-cloud/global/images/utd-gcp-jenkins-server"
 image_jenkins             = "https://www.googleapis.com/compute/v1/projects/panw-gcp-team-testing/global/images/jenkins-11-2021"
-image_kali                = "https://www.googleapis.com/compute/v1/projects/savvy-droplet-229621/global/images/kali37516s"
+image_kali                = "https://www.googleapis.com/compute/v1/projects/panw-gcp-team-testing/global/images/kali"
 image_juice               = "https://www.googleapis.com/compute/v1/projects/panw-gcp-team-testing/global/images/juice-shop-11-2021"
 ip_jenkins                = "192.168.11.4"
 ip_kali                   = "192.168.11.3"
